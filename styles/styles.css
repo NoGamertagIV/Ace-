@@ -1,12 +1,10 @@
-body, h1, h2, h3, p, ul, figure {
+body, h1, h2, h3, p, ul, figure, figcaption {
   margin: 0;
   padding: 0;
 }
 
 
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: 'Playfair Display', serif;
@@ -23,15 +21,37 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+ max-width: 130px;
+  
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 nav ul {
-  list-style-type: none;
   display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
 }
 
 nav ul li {
+  display: flex;
   margin-right: 20px;
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+  justify-content: center;
 }
 
 nav a {
@@ -43,6 +63,21 @@ nav a {
 
 section {
   padding: 50px 0;
+}
+
+#mission {
+  position: relative;
+  height: 100vh;
+  background-image: url(../images/Tech\ background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mission .content {
+  text-align: center;
 }
 
 h2 {
@@ -70,7 +105,7 @@ figcaption {
 #parts{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #parts hgroup {
@@ -78,18 +113,21 @@ figcaption {
 }
 
 #parts figure {
-  flex: 1 calc(27%);
+  flex: 0 1 calc(27%);
   margin-bottom: 20px;
   text-align: center;
 }
 
 #parts img {
  width: 100%;
- max-width: 100px;
+ max-width: 150px;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
 }
 
 #parts figure img {
-  width: 100;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -97,6 +135,8 @@ figcaption {
 #parts h4 {
   margin-top: 10px;
 }
+
+
 
 #team {
   display: flex;
@@ -116,6 +156,9 @@ figcaption {
 
 #team h4 {
   margin-top: 10px; 
+}
+#members h2 {
+  text-align: center;
 }
 
 #contact {
@@ -158,6 +201,24 @@ footer {
   }
   
   #parts figure{
-    flex: 0 1 100%;
+    flex-basis: calc(33%);
+    flex-direction: column;
+    flex-flow: column;
   }
 }
+
+@media (max-width: 767px) {
+  #parts figure {
+    flex: 0 1 100%; 
+  }
+}
+
+@media  (max-width: 1441px) {
+.pieces {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+}
+
