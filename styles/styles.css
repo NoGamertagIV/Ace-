@@ -1,4 +1,4 @@
-body, h1, h2, h3, p, ul, figure, figcaption {
+body, h1, h2, h3, p, ul, figure, figcaption, section, div{
   margin: 0;
   padding: 0;
 }
@@ -11,7 +11,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: black;
-  background-color: #f2f2f2;
+  background-color: black;
 }
 
 header {
@@ -52,6 +52,7 @@ nav ul li {
   margin: 0 10px;
   text-align: center;
   justify-content: center;
+  font-family: 'Nova Square', sans-serif;
 }
 
 nav a {
@@ -66,26 +67,40 @@ section {
 }
 
 #mission {
-  position: relative;
-  height: 100vh;
-  background-image: url(../images/Tech\ background.jpg);
+  background-image: url(../images/tech-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  width: 1900px;
+  min-height: 500px;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: 'Nova Square', sans-serif;
+}
+
+#mission hgroup {
+  background-color: black;
+  width: 100%;
+  z-index: 10;
 }
 
 #mission .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
 }
 
 h2 {
-  color: #0066cc; 
+  color: goldenrod
 }
 
 h4 {
-  color: #333; 
+  color: goldenrod; 
 }
 
 hgroup{
@@ -106,6 +121,9 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: black;
+  font-family: 'Nova Square', sans-serif;
+  
 }
 
 #parts hgroup {
@@ -114,8 +132,12 @@ figcaption {
 
 #parts figure {
   flex: 0 1 calc(27%);
-  margin-bottom: 20px;
+  
   text-align: center;
+}
+
+#parts figure figcaption {
+  color: goldenrod;
 }
 
 #parts img {
@@ -130,6 +152,17 @@ figcaption {
   width: 100%;
   display: block;
   margin: 0 auto;
+  border: 5px solid goldenrod;
+  border-radius: 10px 10px;
+}
+
+.pieces img {
+ border: 25px solid goldenrod;
+}
+
+#members h2 {
+  background-color: black;
+  
 }
 
 #parts h4 {
@@ -141,6 +174,8 @@ figcaption {
 #team {
   display: flex;
   justify-content: space-between;
+  background-color: black;
+
 }
 
 #team figure {
@@ -148,6 +183,11 @@ figcaption {
   text-align: center;
   margin: 0 10px; 
 }
+
+#team figure figcaption {
+  color: goldenrod;
+}
+
 #team img {
   width: 100%;
   max-width: 150px; 
@@ -163,6 +203,10 @@ figcaption {
 
 #contact {
   text-align: center;
+  background-color: black;
+}
+#info {
+  color: goldenrod;
 }
 
 footer {
